@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>Beldorcentr</Company>
+    <Product>StateRegisterOfTaxpayers</Product>
+    <Authors>Beldorcentr</Authors>
+    <Description>.NET client library for Ministry of Taxes and Duties of the Republic of Belarus UNP (Payer’s Account Number) service</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/beldorcentr/state-register-of-taxpayers</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

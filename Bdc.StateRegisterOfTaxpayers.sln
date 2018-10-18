@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bdc.StateRegisterOfTaxpayers", "Bdc.StateRegisterOfTaxpayers\Bdc.StateRegisterOfTaxpayers.csproj", "{192921A1-1CC9-45D7-B5A7-8742AEC571C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bdc.StateRegisterOfTaxpayers", "Bdc.StateRegisterOfTaxpayers\Bdc.StateRegisterOfTaxpayers.csproj", "{192921A1-1CC9-45D7-B5A7-8742AEC571C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bdc.StateRegisterOfTaxpayers.ConsoleTest", "Bdc.StateRegisterOfTaxpayers.ConsoleTest\Bdc.StateRegisterOfTaxpayers.ConsoleTest.csproj", "{FE106873-67DB-4F08-AD05-CB83DAFBC881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{192921A1-1CC9-45D7-B5A7-8742AEC571C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{192921A1-1CC9-45D7-B5A7-8742AEC571C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{192921A1-1CC9-45D7-B5A7-8742AEC571C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE106873-67DB-4F08-AD05-CB83DAFBC881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE106873-67DB-4F08-AD05-CB83DAFBC881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE106873-67DB-4F08-AD05-CB83DAFBC881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE106873-67DB-4F08-AD05-CB83DAFBC881}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
