@@ -20,3 +20,48 @@ var stateRegisterOfTaxpayerService = new StateRegisterOfTaxpayerService();
 var taxpayer = stateRegisterOfTaxpayerService.GetTaxpayer("190638734").Result;
 Console.WriteLine(taxpayer.Name);
 ```
+
+## Documentation
+
+### StateRegisterOfTaxpayerService Class
+
+#### Constructors
+
+Name | Description
+--- | ---
+StateRegisterOfTaxpayerService() | Initialize with default api url (http://www.portal.nalog.gov.by/grp/getData?unp={unp})
+StateRegisterOfTaxpayerService(string apiUrl) | Initialize with custom api url. "{unp}" - placehoolder for taxpayer UNP.
+
+#### Methods
+
+Name | Description
+--- | ---
+async Task&lt;Taxpayer&gt; GetTaxpayer(string unp) | Return Taxpayer by unp. If taxpayer was not found, return null. Throw WebException in case of HTTP errors.
+
+### Taxpayer Class
+
+#### Properties
+
+Name | Type | Description
+--- | --- | ---
+Unp | string |
+Name | string |
+FullNameWithAddress | string |
+Address | string |
+Address | string |
+Status | string |
+StatusCode | StatusCode |
+CreateDate | DateTime? |
+LiquidationDate | DateTime? | Null if organization is not liquidated
+BasisForLiquidation | string | Empty string if organization is not liquidated
+TaxAndDutiesMinistryInspectionCode | string |
+TaxAndDutiesMinistryInspectionName | string |
+
+### StatusCode Enum
+
+Value |
+--- |
+Active |
+ProcessOfLiquidationType1 |
+ProcessOfLiquidationType2 |
+Liquidated |
