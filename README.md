@@ -17,6 +17,6 @@ Require .NET Standard 2.0 (.NET Core 2.0+, .NET Framework 4.6.1+)
 
 ```csharp
 var stateRegisterOfTaxpayerService = new StateRegisterOfTaxpayerService();
-var taxpayer = stateRegisterOfTaxpayerService.GetTaxpayer(190638734).Result;
+var taxpayer = stateRegisterOfTaxpayerService.GetTaxpayer("190638734").Result;
 Console.WriteLine(taxpayer.Name);
 ```

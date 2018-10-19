@@ -19,7 +19,7 @@ namespace Bdc.StateRegisterOfTaxpayers
             _apiUrl = apiUrl;
         }
 
-        public async Task<Taxpayer> GetTaxpayer(int unp)
+        public async Task<Taxpayer> GetTaxpayer(string unp)
         {
             // sometimes (correlation yet to be found) response can be gzipped
             HttpClientHandler handler = new HttpClientHandler()
@@ -48,9 +48,9 @@ namespace Bdc.StateRegisterOfTaxpayers
             }
         }
 
-        private string GetRequestUrl(int unp)
+        private string GetRequestUrl(string unp)
         {
-            return _apiUrl.Replace("{unp}", unp.ToString());
+            return _apiUrl.Replace("{unp}", unp);
         }
 
         private T DeserializeObject<T>(string xml)

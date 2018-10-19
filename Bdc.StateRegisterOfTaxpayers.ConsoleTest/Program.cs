@@ -17,7 +17,7 @@ namespace Bdc.StateRegisterOfTaxpayers.ConsoleTest
 
             try
             {
-                payer = stateRegisterOfTaxpayerService.GetTaxpayer(190638734).Result;
+                payer = stateRegisterOfTaxpayerService.GetTaxpayer("190638734").Result;
             }
             catch (Exception e)
             {
