@@ -19,17 +19,20 @@ namespace Bdc.StateRegisterOfTaxpayers
             _apiUrl = apiUrl;
         }
 
-        public async Task<Taxpayer> GetTaxpayer(string unp)
+        public async Task<Taxpayer> GetTaxpayerAsync(string unp)
         {
             // sometimes (correlation yet to be found) response can be gzipped
             HttpClientHandler handler = new HttpClientHandler()
             {
-                AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+                AutomaticDecompression = DecompressionMethods.GZip |
+                    DecompressionMethods.Deflate
             };
 
             using (HttpClient httpClient = new HttpClient(handler))
             {
-                HttpResponseMessage response = await httpClient.GetAsync(GetRequestUrl(unp));
+                HttpResponseMessage response = await httpClient
+                    .GetAsync(GetRequestUrl(unp))
+                    .ConfigureAwait(false);
 
                 if (response.StatusCode == HttpStatusCode.BadRequest)
                 {

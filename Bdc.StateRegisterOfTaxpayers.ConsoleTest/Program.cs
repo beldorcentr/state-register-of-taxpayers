@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
 
 namespace Bdc.StateRegisterOfTaxpayers.ConsoleTest
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             // BDC 190638734
             // missing 700046451
@@ -17,7 +18,7 @@ namespace Bdc.StateRegisterOfTaxpayers.ConsoleTest
 
             try
             {
-                payer = stateRegisterOfTaxpayerService.GetTaxpayer("190638734").Result;
+                payer = await stateRegisterOfTaxpayerService.GetTaxpayerAsync("190638734");
             }
             catch (Exception e)
             {

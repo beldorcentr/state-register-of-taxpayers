@@ -17,7 +17,7 @@ Require .NET Standard 2.0 (.NET Core 2.0+, .NET Framework 4.6.1+)
 
 ```csharp
 var stateRegisterOfTaxpayerService = new StateRegisterOfTaxpayerService();
-var taxpayer = stateRegisterOfTaxpayerService.GetTaxpayer("190638734").Result;
+var taxpayer = await stateRegisterOfTaxpayerService.GetTaxpayerAsync("190638734");
 Console.WriteLine(taxpayer.Name);
 ```
 
@@ -36,7 +36,7 @@ StateRegisterOfTaxpayerService(string apiUrl) | Initialize with custom api url. 
 
 Name | Description
 --- | ---
-async Task&lt;Taxpayer&gt; GetTaxpayer(string unp) | Return Taxpayer by unp. If taxpayer was not found, return null. Throw WebException in case of HTTP errors.
+async Task&lt;Taxpayer&gt; GetTaxpayerAsync(string unp) | Return Taxpayer by unp. If taxpayer was not found, return null. Throw WebException in case of HTTP errors.
 
 ### Taxpayer Class
 
