@@ -8,7 +8,7 @@
     <Description>.NET client library for Ministry of Taxes and Duties of the Republic of Belarus UNP (Payer’s Account Number) service</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/beldorcentr/state-register-of-taxpayers</RepositoryUrl>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
 </Project>

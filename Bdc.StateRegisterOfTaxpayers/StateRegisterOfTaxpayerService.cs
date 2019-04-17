@@ -34,9 +34,10 @@ namespace Bdc.StateRegisterOfTaxpayers
                     .GetAsync(GetRequestUrl(unp))
                     .ConfigureAwait(false);
 
-                if (response.StatusCode == HttpStatusCode.BadRequest)
+                // 400 respone used to be NotFound response
+                if (response.StatusCode == HttpStatusCode.BadRequest ||
+                    response.StatusCode == HttpStatusCode.NotFound)
                 {
-                    // 400 respone - no unp with that number
                     return null;
                 }
 
