@@ -5,6 +5,8 @@ StateRegisterOfTaxpayers
 
 ## Installation
 
+*Warning!* nuget.org contains old version of package
+
 [![Bdc.StateRegisterOfTaxpayers](https://img.shields.io/nuget/v/Bdc.StateRegisterOfTaxpayers.svg)](https://www.nuget.org/packages/Bdc.StateRegisterOfTaxpayers/)
 
 ```cmd
@@ -47,7 +49,6 @@ Name | Type | Description
 Unp | string |
 Name | string |
 FullNameWithAddress | string |
-Address | string |
 Address | string |
 Status | string |
 StatusCode | StatusCode |
